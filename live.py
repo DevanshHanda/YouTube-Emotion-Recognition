@@ -3,7 +3,7 @@ import json
 
 def stream_user_posts(user_id):
     # Set up the stream
-    url = "https://api.mastodon.cloud/v1/streaming/timeline?user={}&format=json".format(user_id)
+    url = "".format(user_id) # Add mastodon api key to in "".
     headers = {"Authorization": "Bearer YOUR_ACCESS_TOKEN"}
     stream = requests.get(url, headers=headers, stream=True)
 
